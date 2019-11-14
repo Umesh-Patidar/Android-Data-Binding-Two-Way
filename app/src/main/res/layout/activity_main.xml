@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="userdata"
+            type="com.databinding.model.UserData" />
+
+        <variable
+            name="onclicklistener"
+            type="com.databinding.listener.OnClickListener" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/login_view"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passLayout11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userlayout11"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            app:error="@{userdata.passwordError}">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/forgot_password"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:text="@={userdata.password}"
+                android:textColorHint="#9F9F9F" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userlayout11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            app:error="@{userdata.emailError}">
+
+            <EditText
+                android:id="@+id/username12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:text="@={userdata.email}"
+                android:textColorHint="#9F9F9F" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/passLayout11"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@color/colorAccent"
+            android:onClick="@{()-> onclicklistener.onButtonClick(userdata)}"
+            android:text="@string/login"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+</layout>
