@@ -121,17 +121,9 @@ public static Time getTime(MyView view) {
 | setter method          |       ---                     |  notifyPropertyChanged(BR.property)| 
 
 
-
-
-
-
-
-
-
-
-
-
-
+# End Result
+# End Result
+![Optional Text](../master/data_binding.gif)
 
 
 
