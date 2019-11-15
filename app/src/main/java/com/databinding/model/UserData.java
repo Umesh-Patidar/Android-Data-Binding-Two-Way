@@ -1,12 +1,10 @@
 package com.databinding.model;
 
 import android.content.Context;
-import android.widget.Toast;
 
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 import androidx.databinding.library.baseAdapters.BR;
-
 
 public class UserData extends BaseObservable {
     private String email;

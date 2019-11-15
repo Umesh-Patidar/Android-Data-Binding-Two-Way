@@ -56,7 +56,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
                 android:hint="@string/email"
-                android:inputType="textEmailAddress"
+                android:importantForAutofill="no"
+                android:inputType="textFilter|textEmailAddress|textNoSuggestions"
                 android:singleLine="true"
                 android:text="@={userdata.email}"
                 android:textColorHint="#9F9F9F" />
