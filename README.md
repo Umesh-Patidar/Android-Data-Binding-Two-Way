@@ -11,7 +11,6 @@ To enable the usage of data binding in your Android application, add the followi
      dataBinding.enabled = true
      }
 ```
-> In order to react to changes in the backing data, you can make your layout variable an implementation of Observable, usually BaseObservable, and use a @Bindable annotation, as shown in the following code snippet:
 
 # Binding data
 
@@ -35,3 +34,69 @@ For example, the binding variables that can be used in expressions are defined i
 </layout>
 ```
 The usage of data binding requires changes in your layout files. Such layout files starts with a **layout** root tag followed by a **data** element and a **view root element**. The **data** elements describe data which is available for binding. This view element contains your root hierarchy similar to layout files which are not used with data binding. References to the data elements or expressions within the layout are written in the attribute properties using the **@{} or @={}**.
+
+> In order to react to changes in the backing data, you can make your layout variable an implementation of Observable, usually **BaseObservable**, and use a **@Bindable** annotation, as shown in the following code snippet:
+
+```
+public class UserData extends BaseObservable {
+    private String email;
+    private String password;
+    private Context context;
+
+    public UserData(Context context) {
+        this.context = context;
+    }
+
+    @Bindable
+    public String getEmail() {
+        if (email == null) {
+            return "";
+        }
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+        notifyPropertyChanged(BR.email);
+    }
+}
+```
+# Two-way data binding using custom attributes
+
+>Two-way attributes
+
+The platform provides built-in support for two-way data binding when you use the attributes in the following table
+
+| Class 	| Attribute(s) 	| Binding adapter |
+| --- | --- | --- |
+| AdapterView | 	android:selectedItemPosition | AdapterViewBindingAdapter |
+                 android:selection 	
+| CalendarView 	| android:date 	| CalendarViewBindingAdapter | 
+| CompoundButton 	| android:checked 	| CompoundButtonBindingAdapter | 
+| DatePicker | 	android:year  	| 	DatePickerBindingAdapter 	| 
+                android:month
+                android:day 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
