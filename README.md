@@ -78,6 +78,30 @@ The platform provides built-in support for two-way data binding when you use the
 |     ---        |   android:day                 | 	---                        |
 
 
+If you want to use two-way data binding with custom attributes, you need to work with the **@InverseBindingAdapter** and **@InverseBindingMethod** annotations.
+
+For example, if you want to enable two-way data binding on a "time" attribute in a custom view called MyView, complete the following steps:
+
+```
+1. Annotate the method that sets the initial value and updates when the value changes using @BindingAdapter
+
+@BindingAdapter("time")
+public static void setTime(MyView view, Time newValue) {
+    // Important to break potential infinite loops.
+    if (view.time != newValue) {
+        view.time = newValue;
+    }
+}
+
+2. Annotate the method that reads the value from the view using @InverseBindingAdapter:
+
+@InverseBindingAdapter("time")
+public static Time getTime(MyView view) {
+    return view.getTime();
+}
+
+```
+
 
 
 
