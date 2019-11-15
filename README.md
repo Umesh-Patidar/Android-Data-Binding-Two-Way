@@ -67,15 +67,15 @@ public class UserData extends BaseObservable {
 
 The platform provides built-in support for two-way data binding when you use the attributes in the following table
 
-| Class 	| Attribute(s) 	| Binding adapter |
-| --- | --- | --- |
-| AdapterView | 	android:selectedItemPosition | AdapterViewBindingAdapter |
-                | 	 android:selection 	| 	
-| CalendarView 	| android:date 	| CalendarViewBindingAdapter | 
-| CompoundButton 	| android:checked 	| CompoundButtonBindingAdapter | 
-| DatePicker | 	android:year  	| 	DatePickerBindingAdapter 	| 
-                | 	android:month | 	
-              | 	  android:day | 	
+| Class         	| Attribute(s) 	                | Binding adapter             |
+| ---            | ---                           | ---                         |
+| AdapterView    | 	android:selectedItemPosition | AdapterViewBindingAdapter   |
+|     ---        | 	 android:selection 	         | 	  ---                      |
+| CalendarView 	 |   android:date 	              | CalendarViewBindingAdapter  | 
+| CompoundButton |   android:checked            	| CompoundButtonBindingAdapter| 
+| DatePicker     | 	 android:year                | DatePickerBindingAdapter   	| 
+|      ---       | 	 android:month               | 	---                       	|
+|     ---        |   android:day                 | 	---                        |
 
 
 
