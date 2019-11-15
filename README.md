@@ -122,8 +122,7 @@ public static Time getTime(MyView view) {
 
 
 # End Result
-# End Result
-![Optional Text](../master/data_binding.gif)
+![Optional Text](../master/data_binding_two_way.gif)
 
 
 
