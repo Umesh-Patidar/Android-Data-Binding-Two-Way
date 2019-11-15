@@ -106,7 +106,8 @@ public static Time getTime(MyView view) {
 
 | Values         	       | One Way	                      | Two way                     |
 |         ---            |       ---                     |      ---                    |
-| communication         	| It’s named one-way databinding because there’s only one communication way: from observable to view               | There are two communication ways: from observable to view and viceversa              |
+| Communication         	| It’s named one-way databinding because there’s only one communication way: from observable to view               | There are two communication ways: from observable to view and viceversa              |
+| Symbol                	| @{}                           |  @={}                       |
 
 
 
