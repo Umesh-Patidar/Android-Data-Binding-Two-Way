@@ -117,6 +117,8 @@ public static Time getTime(MyView view) {
 |         ---            |       ---                     |      ---                    |
 | Communication         	| It’s named one-way databinding because there’s only one communication way: from observable to view               | There are two communication ways: from observable to view and viceversa              |
 | Symbol                	| @{}                           |  @={}                       |
+| annotation             |       ---                     |  @Bindable                  |
+| setter method          |       ---                     |  notifyPropertyChanged(BR.property)| 
 
 
 
