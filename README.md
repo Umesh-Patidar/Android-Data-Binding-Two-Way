@@ -37,6 +37,15 @@ The usage of data binding requires changes in your layout files. Such layout fil
 
 > In order to react to changes in the backing data, you can make your layout variable an implementation of Observable, usually **BaseObservable**, and use a **@Bindable** annotation, as shown in the following code snippet:
 
+ # Updating UI using Observables
+
+Observables provides way to automatically sync the UI with data without explicitly calling setter methods. The UI will be updated     when the value of a property changes in an object. To make the object observable, extend the class from BaseObservable.
+
+ - To make a property observable, use @Bindable annotation on getter method.
+ - Call notifyPropertyChanged(BR.property) in setter method to update the UI whenever the data is changed.
+ - The BR class will be generated automatically when data binding is enabled.
+
+
 ```
 public class UserData extends BaseObservable {
     private String email;
