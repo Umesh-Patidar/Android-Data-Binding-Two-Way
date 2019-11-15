@@ -70,12 +70,12 @@ The platform provides built-in support for two-way data binding when you use the
 | Class 	| Attribute(s) 	| Binding adapter |
 | --- | --- | --- |
 | AdapterView | 	android:selectedItemPosition | AdapterViewBindingAdapter |
-                 android:selection 	
+                | 	 android:selection 	| 	
 | CalendarView 	| android:date 	| CalendarViewBindingAdapter | 
 | CompoundButton 	| android:checked 	| CompoundButtonBindingAdapter | 
 | DatePicker | 	android:year  	| 	DatePickerBindingAdapter 	| 
-                android:month
-                android:day 
+                | 	android:month | 	
+              | 	  android:day | 	
 
 
 
